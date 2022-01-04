@@ -1,17 +1,21 @@
-public class PracticLessons {
+public class homTaskif {
     public static void main(String[] args) {
 
         int random = (int) (Math.random() * 10);
         int random2 = (int) (Math.random() * 10);
 
-        // task 1-2
-//            if(random==random2){
-//                System.out.println("Random numbers is equals");
-//            } else if (random > random2){
-//                System.out.println( random + " numbers is bigger than " + random2);
-//            } else if (random < random2){
-//                System.out.println(random2 + " numbers is bigger than " + random);
-//            }
+        // task 1
+//        int plusRandNum = random + random2;
+//        System.out.println("Random numbers " + random + " and " + random2 + " " + "added. Result : " + plusRandNum);
+
+        // task 2
+            if(random==random2){
+                System.out.println("Random numbers is equals " + random + " and " + random2);
+            } else if (random > random2){
+                System.out.println(random + " numbers(r1) is bigger than " + random2);
+            } else {
+                System.out.println(random2 + " numbers(r2) is bigger than " + random);
+            }
 
         // task 3
 //        if (random % 2 == 0) {
@@ -50,11 +54,11 @@ public class PracticLessons {
 //            System.out.println("Random numbers are small");
 //        }
 
-        // 6 task
-//        int random = 9;
-//        int random2 = 11;
-        // for else
-
+        //6 task
+       /* int random = 9;
+        int random2 = 11;
+        for check else
+       */
 //        random++;
 //        random2--;
 //        int randomNumPlus = random + random2;
