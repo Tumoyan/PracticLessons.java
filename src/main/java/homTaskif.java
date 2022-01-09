@@ -53,14 +53,14 @@ public class homTaskif {
 
         // 6 task
 
+        int oldValue = random;
         random++;
         random2--;
         random = random * random2;
         if (random > 10 || random != 10) {
             System.out.println("Random number : " + random);
         } else {
-
-        System.out.println("Old random number: " + random);
+        System.out.println("Old random number: " + oldValue);
         }
     }
 }
