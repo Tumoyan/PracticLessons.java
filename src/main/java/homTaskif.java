@@ -57,10 +57,10 @@ public class homTaskif {
         random++;
         random2--;
         random = random * random2;
-        if (random > 10 || random != 10) {
+        if (!(random >= 10)) {
             System.out.println("Random number : " + random);
         } else {
-        System.out.println("Old random number: " + oldValue);
+            System.out.println("Old random number: " + oldValue);
         }
     }
 }
