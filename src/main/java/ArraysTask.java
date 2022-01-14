@@ -11,10 +11,6 @@ public class ArraysTask {
 //        System.out.println("Size array: " + array.length);
 
         //3,4,5,6 task
-        /*
-            հաշվել և տերմինալում տպել թե քանի 0 կա 2րդ զանգվածում
-            և գտնել թե որ զանգվածում ավելի շատ թիվ կա 0-ները չհաշված
-         */
         int array[];
         int n;
         Scanner scan = new Scanner(System.in);
