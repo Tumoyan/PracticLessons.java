@@ -1,5 +1,6 @@
+import java.util.Scanner;
 
-public class PracticLessons {
+public class Draft {
     public static void main(String[] args) {
 
     }
