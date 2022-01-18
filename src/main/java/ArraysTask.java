@@ -25,30 +25,32 @@ public class ArraysTask {
         }
         System.out.println();
         // 7,8 task
-        int rand = (int) (Math.random() * 14);
-        for (int i = 0; i < array.length; i++) {
-            if (i % 2 == 1)
-                array[i] *= 2;
-            else if (array[i] == 0) {
-                array[i] = rand;
+        for (int i = 0; i < array.length - 1; i += 2) {
+            if (array[i + 1] != 0) {
+                array[i] = array[i + 1] * 2;
+            } else {
+                    array[i] = (int) (Math.random() * 14);
             }
-            System.out.print(array[i] + " ");
+
         }
-        // 9 task
+        System.out.println("");
+        System.out.print("array 2nd elements are: ");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ", ");
+        }
         int count = 0;
-        int i;
-        for (i = 0; i < array.length; i++) {
-            if (array[i] == 0)
-                count++;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != 0) count++;
         }
-        System.out.println();
-        System.out.print("Zero count in number two arrays: " + count);
-        int countNum = 0;
-        for (i = 0; i < array.length; i++) {
-            if (array[i] != 0)
-                countNum++;
+        System.out.println("");
+        System.out.print("array has " + count + " elements");
+
+        if (count > array.length) {
+            System.out.println("second is bigger");
+        } else if (count == array.length) {
+            System.out.println("equal");
+        } else {
+            System.out.println("arr is bigger");
         }
-        System.out.println();
-        System.out.print("Array contains more numbers : " + countNum);
     }
 }
