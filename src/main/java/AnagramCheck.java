@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class AnagramCheck {
@@ -9,37 +10,35 @@ public class AnagramCheck {
         System.out.print("Input string 2: ");
         String anagramStr2 = scanner.nextLine();
 
-        if (anagramStr1.length() == anagramStr2.length()) {
-            char[] anagramArr1 = anagramStr1.toCharArray();
-            char[] anagramArr2 = anagramStr2.toCharArray();
+        if (anagramCheck(anagramStr1, anagramStr2)) {
+            System.out.println("Anagrams");
+        } else {
+            System.out.println("Not anagrams");
+        }
+    }
 
-            int iteration = anagramArr1.length - 1;
-            for (int i = 0; i < anagramArr1.length - 1; i++) {
-                for (int j = 0; j < iteration; j++) {
-                    if (anagramArr1[i] > anagramArr1[i + 1]) {
-                        char tmp;
-                        tmp = anagramArr1[i];
-                        anagramArr1[i] = anagramArr1[i + 1];
-                        anagramArr1[i + 1] = tmp;
-                    }
-                    if (anagramArr2[i] > anagramArr2[i + 1]) {
-                        char tmp;
-                        tmp = anagramArr2[i];
-                        anagramArr2[i] = anagramArr2[i + 1];
-                        anagramArr2[i + 1] = tmp;
-                    }
-                }
-                iteration--;
+    static boolean anagramCheck(String s1, String s2) {
+
+        s1 = s1.toLowerCase().replace(" ", "");
+        s2 = s2.toLowerCase().replace(" ", "");
+
+        // checking length
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        // transform to arrays
+        char[] string1ToArray = s1.toCharArray();
+        char[] string2ToArray = s2.toCharArray();
+
+        // Sorting
+        Arrays.sort(string1ToArray);
+        Arrays.sort(string2ToArray);
+
+        for (int i = 0; i < s1.length(); i++) {
+            if (string1ToArray[i] != string2ToArray[i]) {
+                return false;
             }
-            boolean isAnagram = true;
-            for (int i = 0; i < anagramArr1.length; i++) {
-                if(anagramArr1[i] != anagramArr2[i]){
-                    isAnagram = false;
-                    break;
-                }
-            }
-            System.out.println("Is anagram " + isAnagram);
-        } else
-            System.out.println("Not anagram");
+        }
+        return true;
     }
 }
