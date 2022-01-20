@@ -8,7 +8,6 @@ public class GuessTheNumber {
         System.out.println("Guess the number :) ");
 
         int tryCount = 0;
-        int[][] saveNum;
         while (true) {
             System.out.println("Enter a num for 0 to 100 : ");
             int inputNum = scanner.nextInt();
