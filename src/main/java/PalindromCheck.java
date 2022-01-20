@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class PalindromCheck {
     public static void main(String[] args) {
-        PalindromCheck pn = new PalindromCheck();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Write palindrome or not palindrome text");
         System.out.println("For example - civic,level,radar");
