@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class GuessTheNumber {
@@ -6,12 +8,21 @@ public class GuessTheNumber {
         int rand = (int) (Math.random() * 100 + 1);
         Scanner scanner = new Scanner(System.in);
         System.out.println("Guess the number :) ");
+        System.out.println("Enter a num from 0 to 100");
+
+        List<Integer> listOfNums = new ArrayList<>();
 
         int tryCount = 0;
         while (true) {
-            System.out.println("Enter a num for 0 to 100 : " + rand);
             int inputNum = scanner.nextInt();
+            listOfNums.add(inputNum);
             tryCount++;
+
+            if (tryCount == 20) {
+                System.out.println("Your limit has been expired");
+                break;
+            }
+
             if (inputNum == rand) {
                 System.out.println("You win!!! It took you " + tryCount + " tries");
                 break;
@@ -21,6 +32,7 @@ public class GuessTheNumber {
                 System.out.println("Please enter less than " + inputNum);
             }
         }
+        System.out.println("Your input numbers: " + listOfNums);
         scanner.close();
     }
 }
